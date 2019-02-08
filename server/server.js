@@ -18,4 +18,8 @@ app.post('/api/world', (req,res) => {
       );
 })
 
+app.get('*', (req,res) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'))
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
